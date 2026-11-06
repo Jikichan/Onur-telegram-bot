@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: onur-telegram-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: FATHER_IDS
+        sync: false
